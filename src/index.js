@@ -4,11 +4,13 @@ import App from "./App";
 
 import "bootstrap/dist/css/bootstrap.min.css";
 
-import { BrowserRouter as Router } from "react-router-dom";
+import { HashRouter, Switch } from "react-router-dom";
 
 ReactDOM.render(
-  <Router>
-    <App />
-  </Router>,
+  <HashRouter>
+    <Switch>
+      <App />
+    </Switch>
+  </HashRouter>,
   document.getElementById("root")
 );
