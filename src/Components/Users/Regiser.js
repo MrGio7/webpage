@@ -3,7 +3,7 @@ import axios from "axios";
 import "../../style/Users/Register.scss";
 import { Form, Button } from "react-bootstrap";
 
-const Register = () => {
+const Register = props => {
   const [user, setUser] = useState({ username: "", password: "" });
 
   const changeHandler = ev => {
@@ -22,7 +22,7 @@ const Register = () => {
         console.log(res);
         console.log(res.data);
         alert("Congrats U registered Successfully");
-        window.location.pathname = "/home";
+        prop.history.push("/home");
       })
       .catch(err => {
         console.log(err);

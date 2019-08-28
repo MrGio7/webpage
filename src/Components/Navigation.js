@@ -5,12 +5,12 @@ import Nav from "react-bootstrap/Nav";
 import { LinkContainer } from "react-router-bootstrap";
 import "../style/Navigation.scss";
 
-const Navigation = () => {
+const Navigation = props => {
   const [user, setUser] = useState({});
 
   const LogOut = () => {
     localStorage.removeItem("token");
-    window.location.pathname = "/home";
+    prop.history.push("/home");
   };
 
   useEffect(() => {
