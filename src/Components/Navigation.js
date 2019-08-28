@@ -10,7 +10,7 @@ const Navigation = prop => {
 
   const LogOut = () => {
     localStorage.removeItem("token");
-    prop.history.push("/home");
+    prop.history.push("/webpage/");
   };
 
   useEffect(() => {
