@@ -22,7 +22,7 @@ const Register = prop => {
         console.log(res);
         console.log(res.data);
         alert("Congrats U registered Successfully");
-        prop.history.push("/webpage/");
+        prop.history.push("/home");
       })
       .catch(err => {
         console.log(err);

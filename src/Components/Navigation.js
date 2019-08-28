@@ -8,9 +8,10 @@ import "../style/Navigation.scss";
 const Navigation = prop => {
   const [user, setUser] = useState({});
 
-  const LogOut = () => {
+  const LogOut = ev => {
+    ev.preventDefault();
     localStorage.removeItem("token");
-    prop.history.push("/webpage/");
+    prop.history.push("/home");
   };
 
   useEffect(() => {
