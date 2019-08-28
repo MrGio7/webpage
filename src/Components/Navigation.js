@@ -5,7 +5,7 @@ import Nav from "react-bootstrap/Nav";
 import { LinkContainer } from "react-router-bootstrap";
 import "../style/Navigation.scss";
 
-const Navigation = props => {
+const Navigation = prop => {
   const [user, setUser] = useState({});
 
   const LogOut = () => {

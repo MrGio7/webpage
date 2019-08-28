@@ -3,7 +3,7 @@ import axios from "axios";
 import "../../style/Users/Register.scss";
 import { Form, Button } from "react-bootstrap";
 
-const Register = props => {
+const Register = prop => {
   const [user, setUser] = useState({ username: "", password: "" });
 
   const changeHandler = ev => {
