@@ -15,7 +15,7 @@ const Navigation = () => {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:5000/api/auth/user`, {
+      .get(`https://company-webpage.herokuapp.com/api/auth/user`, {
         headers: { token: localStorage.token }
       })
       .then(res => {

@@ -14,7 +14,7 @@ const Product = () => {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:5000/api/product`, {
+      .get(`https://company-webpage.herokuapp.com/api/product`, {
         headers: { token: localStorage.token }
       })
       .then(res => {
@@ -27,7 +27,7 @@ const Product = () => {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:5000/api/auth/user`, {
+      .get(`https://company-webpage.herokuapp.com/api/auth/user`, {
         headers: { token: localStorage.token }
       })
       .then(res => {
@@ -40,7 +40,7 @@ const Product = () => {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:5000/api/likes`)
+      .get(`https://company-webpage.herokuapp.com/api/likes`)
       .then(res => {
         setCounter(res.data);
       })
@@ -54,7 +54,7 @@ const Product = () => {
     const body = { id_product: ev.target.id, id_user: user.id };
 
     axios
-      .put(`http://localhost:5000/api/likes`, body)
+      .put(`https://company-webpage.herokuapp.com/api/likes`, body)
       .then(res => {
         setCounter(res.data);
       })

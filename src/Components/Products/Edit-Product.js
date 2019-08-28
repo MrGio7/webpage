@@ -22,7 +22,7 @@ const EditProduct = props => {
   useEffect(() => {
     const id = props.match.params.id;
     axios
-      .get(`http://localhost:5000/api/product/${id}`, {
+      .get(`https://company-webpage.herokuapp.com/api/product/${id}`, {
         headers: { token: localStorage.token }
       })
       .then(res => {
@@ -37,7 +37,7 @@ const EditProduct = props => {
     ev.preventDefault();
     const id = props.match.params.id;
     axios
-      .put(`http://localhost:5000/api/product/${id}`, data, {
+      .put(`https://company-webpage.herokuapp.com/api/product/${id}`, data, {
         headers: { token: localStorage.token }
       })
       .then(res => {

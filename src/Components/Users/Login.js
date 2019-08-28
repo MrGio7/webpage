@@ -19,7 +19,7 @@ const Login = prop => {
   const loginHandler = ev => {
     ev.preventDefault();
     axios
-      .post(`http://localhost:5000/api/auth/login`, user)
+      .post(`https://company-webpage.herokuapp.com/api/auth/login`, user)
       .then(res => {
         console.log(res);
         console.log(res.data);

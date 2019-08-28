@@ -17,7 +17,7 @@ const Register = () => {
   const registerHandler = ev => {
     ev.preventDefault();
     axios
-      .post(`http://localhost:5000/api/auth/register`, user)
+      .post(`https://company-webpage.herokuapp.com/api/auth/register`, user)
       .then(res => {
         console.log(res);
         console.log(res.data);

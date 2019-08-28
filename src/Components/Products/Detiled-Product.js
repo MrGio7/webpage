@@ -14,7 +14,7 @@ const DetiledProd = props => {
   useEffect(() => {
     const id = props.match.params.id;
     axios
-      .get(`http://localhost:5000/api/product/${id}`, {
+      .get(`https://company-webpage.herokuapp.com/api/product/${id}`, {
         headers: { token: localStorage.token }
       })
       .then(res => {
@@ -27,7 +27,7 @@ const DetiledProd = props => {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:5000/api/auth/user`, {
+      .get(`https://company-webpage.herokuapp.com/api/auth/user`, {
         headers: { token: localStorage.token }
       })
       .then(res => {
@@ -42,7 +42,7 @@ const DetiledProd = props => {
     const id = props.match.params.id;
 
     axios
-      .get(`http://localhost:5000/api/comments/${id}`)
+      .get(`https://company-webpage.herokuapp.com/api/comments/${id}`)
       .then(res => {
         setComments(res.data);
       })
@@ -53,7 +53,7 @@ const DetiledProd = props => {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:5000/api/users`)
+      .get(`https://company-webpage.herokuapp.com/api/users`)
       .then(res => {
         setUserList(res.data);
       })
@@ -66,7 +66,7 @@ const DetiledProd = props => {
     ev.preventDefault();
     const id = props.match.params.id;
     axios
-      .delete(`http://localhost:5000/api/product/${id}`, {
+      .delete(`https://company-webpage.herokuapp.com/api/product/${id}`, {
         headers: { token: localStorage.token }
       })
       .then(() => {
@@ -94,7 +94,7 @@ const DetiledProd = props => {
     const form = ev.target;
 
     axios
-      .post(`http://localhost:5000/api/comments/add`, newComment, {
+      .post(`https://company-webpage.herokuapp.com/api/comments/add`, newComment, {
         headers: { token: localStorage.token }
       })
       .then(res => {
@@ -112,7 +112,7 @@ const DetiledProd = props => {
     const { id } = ev.target;
 
     axios
-      .delete(`http://localhost:5000/api/comments/${id}`, {
+      .delete(`https://company-webpage.herokuapp.com/api/comments/${id}`, {
         headers: { token: localStorage.token }
       })
       .then(res => {

@@ -22,7 +22,7 @@ const AddProduct = () => {
   const newProdHandler = ev => {
     ev.preventDefault();
     axios
-      .post(`http://localhost:5000/api/product/add`, product)
+      .post(`https://company-webpage.herokuapp.com/api/product/add`, product)
       .then(res => {
         console.log(res);
         console.log(res.data);
