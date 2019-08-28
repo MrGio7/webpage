@@ -11,7 +11,7 @@ const Navigation = prop => {
   const LogOut = ev => {
     ev.preventDefault();
     localStorage.removeItem("token");
-    prop.history.push("/Home");
+    prop.history.push("/");
   };
 
   useEffect(() => {
