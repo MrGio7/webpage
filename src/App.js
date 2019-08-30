@@ -17,7 +17,7 @@ import { Route, Switch } from "react-router-dom";
 function App() {
   return (
     <div>
-        <Route path="/" component={Navigation} />
+        <Route path="#/" component={Navigation} />
         <Route exact path="/" component={Home} />
         <Route exact path="/home" component={Home} />
         <Route exact path="/product" component={Product} />
