@@ -18,8 +18,8 @@ function App() {
   return (
     <div>
         <Route path="/" component={Navigation} />
-        <Route path="/" component={Home} />
-        <Route path="/home" component={Home} />
+        <Route exact path="/" component={Home} />
+        <Route exact path="/home" component={Home} />
         <Route exact path="/product" component={Product} />
         <Route exact path="/about" component={About} />
         <Route exact path="/login" component={Login} />
