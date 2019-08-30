@@ -12,7 +12,7 @@ import {
 import Login from "./Components/Users/Login";
 import Register from "./Components/Users/Regiser.js";
 
-import { Route, Switch } from "react-router-dom";
+import { Route } from "react-router-dom";
 
 function App() {
   return (
